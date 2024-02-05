@@ -357,8 +357,8 @@ export function Customizer() {
                 <Button
                   variant={"outline"}
                   size="sm"
-                  onClick={() => handleChangeLang("zh-CN")}
-                  className={cn(config.lang === "zh-CN" && "border-2 border-primary")}
+                  onClick={() => handleChangeLang("zh")}
+                  className={cn(config.lang === "zh" && "border-2 border-primary")}
                 >
                   <TbLetterZ className="mr-1 -translate-x-1"/>
                   中文

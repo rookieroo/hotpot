@@ -19,16 +19,15 @@ export default function Home() {
           <LargeHeading
             size='lg'
             className='three-d text-black dark:text-light-gold'>
-            Easily determine <br /> text similarity.
+            To be <br /> continued.
           </LargeHeading>
 
           <Paragraph className='max-w-xl lg:text-left'>
-            With the Text Similarity API, you can easily determine the
-            similarity between two pieces of text with a free{' '}
+            Find your own editor{' '}
             <Link
-              href='/login'
+              href='/markdown'
               className='underline underline-offset-2 text-black dark:text-light-gold'>
-              API key
+              Markdown Editor
             </Link>
             .
           </Paragraph>

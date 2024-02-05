@@ -1,4 +1,5 @@
 import '@/styles/globals.scss'
+import '@/styles/lib/index'
 import {Metadata, Viewport} from "next"
 
 import {siteConfig} from "@/config/site"
