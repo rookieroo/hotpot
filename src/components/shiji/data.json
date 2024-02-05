@@ -1,0 +1,233 @@
+[
+  {
+    "path": "chinese-poetry/caocaoshiji",
+    "name": "曹操诗集",
+    "author": "caocao",
+    "files": [
+      {
+        "name": "caocao",
+        "zh": "曹操诗集"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/ci",
+    "name": "词",
+    "author": "",
+    "files": [
+      {
+        "name": "ci.song.",
+        "min": 0,
+        "max": 21000
+      },
+      {
+        "name": "ci.song.2019y"
+      },
+      {
+        "name": "宋词三百首"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/json",
+    "name": "唐诗和宋诗",
+    "author": "",
+    "files": [
+      {
+        "name": "poet.song.",
+        "min": 0,
+        "max": 254000
+      },
+      {
+        "name": "poet.tang.",
+        "min": 0,
+        "max": 57000
+      },
+      {
+        "name": "唐诗三百首",
+        "zh": "唐诗三百首"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/lunyu",
+    "name": "论语",
+    "author": "孔子及其学生传人",
+    "files": [
+      {
+        "name": "lunyu",
+        "zh": "论语"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/mengxue",
+    "name": "蒙学",
+    "author": "",
+    "files": [
+      {
+        "name": "baijiaxing",
+        "zh": "百家姓"
+      },
+      {
+        "name": "dizigui",
+        "zh": "弟子规"
+      },
+      {
+        "name": "guwenguanzhi",
+        "zh": "古文观止"
+      },
+      {
+        "name": "qianjiashi",
+        "zh": "千家诗"
+      },
+      {
+        "name": "sanzijing-new",
+        "zh": "三字经-新版"
+      },
+      {
+        "name": "sanzijing-traditional",
+        "zh": "三字经-传统"
+      },
+      {
+        "name": "shenglvqimeng",
+        "zh": "声律启蒙"
+      },
+      {
+        "name": "tangshisanbaishou",
+        "zh": "唐诗三百首"
+      },
+      {
+        "name": "wenzimengqiu",
+        "zh": "文字蒙求"
+      },
+      {
+        "name": "youxueqionglin",
+        "zh": "幼学琼林"
+      },
+      {
+        "name": "zengguangxianwen",
+        "zh": "增广贤文"
+      },
+      {
+        "name": "zhuzijiaxun",
+        "zh": "朱子家训"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/shijing",
+    "name": "诗经",
+    "author": "",
+    "files": [
+      {
+        "name": "shijing",
+        "zh": "诗经"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/sishuwujing",
+    "name": "四书五经",
+    "author": "",
+    "files": [
+      {
+        "name": "daxue",
+        "zh": "大学"
+      },
+      {
+        "name": "mengzi",
+        "zh": "孟子"
+      },
+      {
+        "name": "zhongyong",
+        "zh": "中庸"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/wudai/huajianji",
+    "name": "花间集",
+    "author": "",
+    "files": [
+      {
+        "name": "huajianji-0-preface",
+        "zh": "花间集-卷首"
+      },
+      {
+        "name": "huajianji-1-juan",
+        "zh": "花间集-卷一"
+      },
+      {
+        "name": "huajianji-2-juan",
+        "zh": "花间集-卷二"
+      },
+      {
+        "name": "huajianji-3-juan",
+        "zh": "花间集-卷三"
+      },
+      {
+        "name": "huajianji-4-juan",
+        "zh": "花间集-卷四"
+      },
+      {
+        "name": "huajianji-5-juan",
+        "zh": "花间集-卷五"
+      },
+      {
+        "name": "huajianji-6-juan",
+        "zh": "花间集-卷六"
+      },
+      {
+        "name": "huajianji-7-juan",
+        "zh": "花间集-卷七"
+      },
+      {
+        "name": "huajianji-8-juan",
+        "zh": "花间集-卷八"
+      },
+      {
+        "name": "huajianji-9-juan",
+        "zh": "花间集-卷九"
+      },
+      {
+        "name": "huajianji-x-juan",
+        "zh": "花间集-卷末"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/wudai/nantang",
+    "name": "南唐二主词",
+    "author": "",
+    "files": [
+      {
+        "name": "poetrys",
+        "zh": "诗集"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/youmengying",
+    "name": "幽梦影",
+    "author": "",
+    "files": [
+      {
+        "name": "youmengying",
+        "zh": "幽梦影"
+      }
+    ]
+  },
+  {
+    "path": "chinese-poetry/yuanqu",
+    "name": "元曲",
+    "author": "",
+    "files": [
+      {
+        "name": "qu.yuan.",
+        "min": 0,
+        "max": 10000
+      }
+    ]
+  }
+]
