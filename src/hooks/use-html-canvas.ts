@@ -34,7 +34,7 @@ export default function useHtmlCanvas() {
       document.body.appendChild(tempLink);
       tempLink.click();
       document.body.removeChild(tempLink);
-      window.URL.revokeObjectURL(imgUrl);
+      window?.URL?.revokeObjectURL(imgUrl);
       Promise.resolve();
     } catch (error: any) {
       setError(error)
