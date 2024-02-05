@@ -1,3 +1,5 @@
+"use client"
+
 import { KeyValue } from '../lib/keyboard'
 import { getStatuses } from '../lib/statuses'
 import { Key } from './Key'

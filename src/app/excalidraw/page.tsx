@@ -15,7 +15,7 @@ import {useTheme} from "next-themes";
 import {useTranslation} from "@/locales/client";
 
 export default function ExcalidrawApp() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const { i18n } = useTranslation();
 
   const [excalidrawAPI, setExcalidrawAPI] =
@@ -63,7 +63,7 @@ export default function ExcalidrawApp() {
           excalidrawAPI={(api: ExcalidrawImperativeAPI) =>
             setExcalidrawAPI(api)
           }
-          theme={theme}
+          theme={resolvedTheme}
           langCode={i18n.language}
         >
           <AppWelcomeScreen />

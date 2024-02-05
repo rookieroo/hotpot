@@ -9,6 +9,7 @@ import {useTranslation} from "@/locales/client";
 
 export function CommandMenu({ ...props }: DialogProps) {
   const [open, setOpen] = React.useState(false)
+  const [macOS, setIsMac] = React.useState(false)
   const {t: s} = useTranslation("settings", { keyPrefix: 'search' });
 
   React.useEffect(() => {
@@ -27,12 +28,10 @@ export function CommandMenu({ ...props }: DialogProps) {
         setOpen((open) => !open)
       }
     }
-
+    setIsMac(navigator && navigator.platform.toUpperCase().indexOf('MAC') >= 0)
     document.addEventListener("keydown", down)
     return () => document.removeEventListener("keydown", down)
   }, [])
-
-  const macOS = window?.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 
   return (
     <>
