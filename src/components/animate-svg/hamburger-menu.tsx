@@ -1,14 +1,15 @@
 'use client'
 import {Icons} from "@/components/customize-ui/Icons";
 import {Box} from "@mui/material";
+import * as React from "react";
 
 interface Props {
   open: boolean;
-  onOpen: () => void;
+  onOpen?: () => void;
 }
 
-export function HamburgerMenu(props: Props) {
-  const {open, ...rest} = props
+export function HamburgerMenu(props: Props & React.HTMLAttributes<SVGElement>) {
+  const {open, onOpen, ...rest} = props
 
   return (
     <Box
@@ -28,9 +29,7 @@ export function HamburgerMenu(props: Props) {
         }),
       }}
     >
-      <Icons.hamburgerMenu
-        {...rest}
-      />
+      <Icons.hamburgerMenu {...rest} />
     </Box>
   );
 }

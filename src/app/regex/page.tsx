@@ -1,7 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import {Regex} from "@/components/regex/regex";
+import dynamic from "next/dynamic";
+const Regex = dynamic(() => import('@/components/regex/regex'), {ssr: false})
 
 const page: FC = () => {
   return (

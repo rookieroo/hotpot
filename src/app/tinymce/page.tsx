@@ -1,8 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import type { Metadata } from 'next'
-import {TinyMCE} from "@/components/tinymce";
+import dynamic from "next/dynamic";
+const TinyMCE = dynamic(() => import('@/components/tinymce/TinyMCE'), {ssr: false})
 
 const page: FC = () => {
   return (

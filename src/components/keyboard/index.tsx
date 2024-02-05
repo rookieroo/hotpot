@@ -18,7 +18,7 @@ const SWITCH_LIST = ["blue", "red", "brown", "other"];
 const KEYBOARD_TYPE = ["mobile", "apple", "other"];
 const KEYBOARD_MODE = ["typing", "customize"];
 
-export function MyKeyBoard() {
+export default function MyKeyBoard() {
   const [input, setInput] = useState("");
   const [img, setImg] = useState("");
   const [keySwitch, setKeySwitch] = useState("blue");

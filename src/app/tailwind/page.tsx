@@ -10,7 +10,7 @@ const page = async () => {
 
   return (
     <div className='max-w-7xl mx-auto mt-16'>
-      <HamburgerMenu></HamburgerMenu>
+      <HamburgerMenu open={false}></HamburgerMenu>
       <div className="ms-52 my-10 text-5xl font-extrabold">
         <span
           className="animate-pulse bg-gradient-to-r from-pink-500 via-green-500 to-violet-500 bg-clip-text text-transparent"> Tailwind CSS Animation </span>

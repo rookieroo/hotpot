@@ -33,7 +33,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export function Regex() {
+export default function Regex() {
   const { t } = useTranslation();
   const [regex, setRegex] = useState<RegExp>(/vars+([a-zA-Z_]w*);/);
   const [search, setRearch] = useState<string>("");

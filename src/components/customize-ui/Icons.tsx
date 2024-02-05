@@ -24,7 +24,7 @@ export const Icons = {
         x={1} y={5}
         width={14}
         height={1.5}
-        rx={1} fill={props.fill}
+        rx={1}
       />
       <rect
         x={1}
@@ -32,7 +32,6 @@ export const Icons = {
         width={14}
         height={1.5}
         rx={1}
-        fill={props.fill}
       />
     </svg>
   ),

@@ -1,7 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-import Minify from "@/components/minify/minify";
+import dynamic from "next/dynamic";
+const Minify = dynamic(() => import('@/components/minify/minify'), {ssr: false})
 
 const page: FC = () => {
   return (

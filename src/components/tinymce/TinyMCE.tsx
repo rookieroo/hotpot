@@ -86,7 +86,7 @@ const initProps = {
     "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
 }
 
-export function TinyMCE() {
+export default function TinyMCE() {
   const [initState, setInitState] = useState(initProps)
   const { resolvedTheme: theme } = useTheme();
   const editorRef = useRef(null);
