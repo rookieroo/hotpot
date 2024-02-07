@@ -119,7 +119,7 @@ export default function TinyMCE() {
     <div className="h-screen relative z-1">
       <Editor
         id="my_tinyeditor"
-        apiKey="zdx73d6na0ru4hrd84q3pumeff5kelfhu56axrmlyyppvt5f"
+        apiKey="9twrnv6oa6o0jnquo4mp98nx2rfuo7lqu0c3ulpyb1000q12"
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue="<p>This is the initial content of the editor.</p>"
         init={{...initState}}

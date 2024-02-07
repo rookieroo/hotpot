@@ -25,7 +25,7 @@ export default function useHtmlCanvas() {
       const tempLink = document.createElement("a");
       tempLink.style.display = "none";
       tempLink.href = imgUrl;
-      const now = format(new Date(), "YYYY-MM-DD_HH-mm-ss")
+      const now = format(Number(new Date().getTime()), "LLL dd, y")
       const fn = fileName || `${now}${pathname}_.png`
       tempLink.setAttribute("download", fn);
       if (typeof tempLink.download === "undefined")

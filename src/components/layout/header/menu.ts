@@ -74,7 +74,7 @@ const MenuNavs = [
       },
       {
         code: "md",
-        href: "/md",
+        href: "/markdown",
         icon: TbMarkdown,
         description: "Markdown Editor"
 
