@@ -6,7 +6,7 @@ export const siteConfig = {
     "multiple tools",
   links: {
     twitter: "https://twitter.com/chrisding03",
-    // github: "https://github.com/shadcn-ui/ui",
+    xiaohongshu: "https://www.xiaohongshu.com/user/profile/5a12517c4eacab46f198e0b5",
   },
 }
 

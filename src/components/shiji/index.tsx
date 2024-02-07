@@ -78,8 +78,8 @@ export function ShiJi() {
   const setSubContent = (s: IShi) => async () => {
     setSubCont(s);
   };
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSimplified((event.target as HTMLInputElement).valule);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>, val) => {
+    setSimplified(val);
   };
   const sifyOrTify = (s: string | undefined) => {
     if (simplified === "sify") {

@@ -15,16 +15,16 @@ export function SiteFooter() {
             Chris
           </a>
           .
-          {/*The source code is available on{" "}
+          Follow me on {" "}
           <a
-            href={siteConfig.links.github}
+            href={siteConfig.links.xiaohongshu}
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            GitHub
+            xiaohongshu
           </a>
-          .*/}
+          .
         </p>
       </div>
     </footer>
