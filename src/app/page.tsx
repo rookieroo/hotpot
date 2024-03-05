@@ -6,8 +6,8 @@ import Paragraph from '@/components/ui/paragraph'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hotpot | Home',
-  description: 'Trending Today',
+  title: 'Hotpot | Json | Markdown | Tinymce | Excalidraw',
+  description: 'Find your own editor & tools',
 }
 
 export default function Home() {
@@ -19,17 +19,27 @@ export default function Home() {
           <LargeHeading
             size='lg'
             className='three-d text-black dark:text-light-gold'>
-            To be <br /> continued.
+            Try to use <br />
           </LargeHeading>
 
           <Paragraph className='max-w-xl lg:text-left'>
-            Find your own editor{' '}
             <Link
               href='/markdown'
               className='underline underline-offset-2 text-black dark:text-light-gold'>
               Markdown Editor
             </Link>
-            .
+            <br />
+            <Link
+              href='/json'
+              className='underline underline-offset-2 text-black dark:text-light-gold'>
+              Json Editor
+            </Link>
+            <br />
+            <Link
+              href='/tinymce'
+              className='underline underline-offset-2 text-black dark:text-light-gold'>
+              TinyMCE Editor
+            </Link>
           </Paragraph>
 
           <div className='relative w-full max-w-xl lg:max-w-3xl lg:left-1/2 aspect-square lg:absolute'>

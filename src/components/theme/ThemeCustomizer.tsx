@@ -200,7 +200,7 @@ export function Customizer() {
    if (style === "fixed") {
      threshold = 9999
    } else if (style === "hideOnScroll") {
-     threshold = 50
+     threshold = 20
    } else if (style === "static") {
      threshold = 666
    }
@@ -408,7 +408,7 @@ export function Customizer() {
                   variant={"outline"}
                   size="sm"
                   onClick={() => handleHeaderAlignChange("hideOnScroll")}
-                  className={cn(config.threshold === 50 && "border-2 border-primary")}
+                  className={cn(config.threshold === 20 && "border-2 border-primary")}
                 >
                   <TbArrowDownCircle className="mr-1 -translate-x-1"/>
                   {t("Hide")}

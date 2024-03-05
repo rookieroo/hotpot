@@ -6,7 +6,6 @@ import { Theme } from "@/components/theme/themes"
 import {TLanguage} from "@/locales";
 import {i18n} from "@/locales/client";
 import {ThemeOptions} from "@mui/material/styles";
-import {mergeThemes} from "@/components/theme/trending-mui-theme";
 
 type Config = {
   style: Style["name"]
@@ -26,7 +25,7 @@ const configAtom = atomWithStorage<Config>("config", {
   radius: 0.5,
   lang: i18n.language || 'zh',
   direction: 'ltr',
-  threshold: 50,
+  threshold: 20,
   mergeTheme: {}
 })
 
