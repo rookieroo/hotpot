@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import {Button} from "@/ui/button";
 import {useTranslation} from "@/locales/client";
+import {Tab, Tabs} from "@mui/material";
 
 export interface IStarMap {
   name?: string;
@@ -74,30 +75,46 @@ const Demos = [
 ];
 
 export default function Celestial() {
-  const [starMap, setStarMap] = useState<IStarMap | undefined>(undefined);
+  const [index, setIndex] = useState(0);
+  // const [starMap, setStarMap] = useState<IStarMap | undefined>(undefined);
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="h-screen relative z-1 flex flex-col items-center justify-center">
-      <div>
-        {Demos.map((s) => (
-          <Button onClick={() => setStarMap(s)} className="block" key={s.name}>
-            {i18n.language == "en" ? s.en : s.zh}
-          </Button>
-        ))}
-      </div>
-      {starMap && (
-        <iframe
-          style={{
-            display: "block",
-            marginTop: "15px",
-            border: 0,
-            width: "100%",
-            height: "100%",
+    <>
+      <div className="container flex flex-col h-screen max-w-screen-xl items-center">
+        <Tabs
+          value={index}
+          onChange={(e, val) => setIndex(val)}
+          TabScrollButtonProps={{
+            sx: {
+              color: "primary"
+            }
           }}
-          src={`/celestial/demo/${starMap.name}.html`}
-        ></iframe>
-      )}
-    </div>
+          variant="scrollable"
+          scrollButtons="auto"
+          aria-label="scrollable tab"
+        >
+          {Demos.map((s, index) => (
+            <Tab
+              key={s.name}
+              label={i18n.language == "en" ? s.en : s.zh}
+            >
+            </Tab>
+          ))}
+        </Tabs>
+        {index > -1 && (
+          <iframe
+            style={{
+              display: "block",
+              marginTop: "15px",
+              border: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            src={`/celestial/demo/${Demos[index].name}.html`}
+          ></iframe>
+        )}
+      </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from "react";
-import { Editor } from "@tinymce/tinymce-react";
+import React, {useEffect, useRef, useState} from "react";
+import {Editor} from "@tinymce/tinymce-react";
 import {useTheme} from "next-themes";
 
 
@@ -20,16 +20,16 @@ const initProps = {
   autosave_retention: "2m",
   image_advtab: true,
   link_list: [
-    { title: "My page 1", value: "https://www.tiny.cloud" },
-    { title: "My page 2", value: "http://www.moxiecode.com" },
+    {title: "My page 1", value: "https://www.tiny.cloud"},
+    {title: "My page 2", value: "http://www.moxiecode.com"},
   ],
   image_list: [
-    { title: "My page 1", value: "https://www.tiny.cloud" },
-    { title: "My page 2", value: "http://www.moxiecode.com" },
+    {title: "My page 1", value: "https://www.tiny.cloud"},
+    {title: "My page 2", value: "http://www.moxiecode.com"},
   ],
   image_class_list: [
-    { title: "None", value: "" },
-    { title: "Some class", value: "class-name" },
+    {title: "None", value: ""},
+    {title: "Some class", value: "class-name"},
   ],
   importcss_append: true,
   file_picker_callback: (callback, value, meta) => {
@@ -88,35 +88,53 @@ const initProps = {
     "body { font-family:Helvetica,Arial,sans-serif; font-size:16px }",
 }
 
-export default function TinyMCE() {
+const MyEditor = () => {
   const [initState, setInitState] = useState(initProps)
-  const { resolvedTheme: theme } = useTheme();
-  const editorRef = useRef(null);
+  const [key, setKey] = useState(0); // Key to force re-rendering and recreate the editor
+  const {resolvedTheme: theme} = useTheme();
 
   useEffect(() => {
     setInitState({
       ...initState,
       skin: theme === "dark" ? "oxide-dark" : "oxide",
-      content_css: theme === "dark" ? "dark" : "default",
+      content_css: theme === "dark" ? "dark" : "default"
     })
-
-    // if (editorRef.current) {
-    //   const content = editorRef.current.getContent()
-    //   editorRef.current.destroy()
-    //   editorRef.current.editorManager.init({
-    //     ...initState,
-    //     skin: theme == "dark" ? "oxide-dark" : "oxide",
-    //     content_css: theme == "dark" ? "dark" : "default",
-    //   });
-    //   editorRef.current.setContent(content)
-    // }
+    setKey(key + 1); // Increment key to force re-rendering and recreate the editor
   }, [theme])
+
+  return (
+    <div>
+      <EditorWrapper key={key} state={initState} />
+    </div>
+  );
+};
+
+const EditorWrapper = ({ state }) => {
+  const editorRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (editorRef.current) {
+        const editorContainer = editorRef.current.editorContainer;
+        if (editorContainer) {
+          editorContainer.style.height = `${window.innerHeight}px`;
+        }
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const log = () => {
     if (editorRef.current) {
       console.log(editorRef.current.getContent());
     }
   };
+
   return (
     <div className="h-screen relative z-1">
       <Editor
@@ -124,9 +142,14 @@ export default function TinyMCE() {
         apiKey="9twrnv6oa6o0jnquo4mp98nx2rfuo7lqu0c3ulpyb1000q12"
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue="<p>This is the initial content of the editor.</p>"
-        init={{...initState}}
+        init={{
+          ...state,
+          height: window.innerHeight,
+        }}
       />
-      <button onClick={log}>Log editor content</button>
+      {/*<button onClick={log}>Log editor content</button>*/}
     </div>
   );
 }
+
+export default MyEditor;

@@ -64,7 +64,7 @@ export default function ExcalidrawApp() {
             setExcalidrawAPI(api)
           }
           theme={resolvedTheme}
-          langCode={i18n.language}
+          langCode={i18n.language == 'zh' ? "zh-CN" : i18n.language}
         >
           <AppWelcomeScreen />
           {renderMenu()}

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import dynamic from "next/dynamic";
-const TinyMCE = dynamic(() => import('@/components/tinymce/TinyMCE'), {ssr: false})
+const MyEditor = dynamic(() => import('@/components/tinymce/TinyMCE'), {ssr: false})
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const page: FC = () => {
   return (
     <>
-      <TinyMCE />
+      <MyEditor />
     </>
   )
 }

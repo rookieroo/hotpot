@@ -4,6 +4,7 @@ import LargeHeading from '@/components/ui/large-heading'
 import Paragraph from '@/components/ui/paragraph'
 
 import type { Metadata } from 'next'
+import {SiteFooter} from "../components/layout/site-footer";
 
 export const metadata: Metadata = {
   title: 'Hotpot | Json | Markdown | Tinymce | Excalidraw',
@@ -53,6 +54,7 @@ export default function Home() {
               alt='typewriter'
             />
           </div>
+          <SiteFooter/>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next'
-import {daysToWeeks, format, getWeek} from "date-fns";
+import {useTranslation} from "@/locales/client";
+import {daysToWeeks, format, getDay} from "date-fns";
 
 const weekNames = {
   'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -15,7 +15,7 @@ export function TimeNow() {
   const getTimeNowText = () => {
     const lang = i18n.language as 'en' | 'zh'
     const now = new Date()
-    const weekday = getWeek(now)
+    const weekday = getDay(now)
     const time = format(now, 'yyyy/MM/dd HH:mm:ss')
     return `${time} ${weekNames[lang][weekday > 0 ? weekday - 1 : 6]}`
   }

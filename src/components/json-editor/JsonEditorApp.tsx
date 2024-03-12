@@ -9,18 +9,13 @@ import {useTranslation} from "@/locales/client";
 const LEFT_JSON = {
   marks: [50, 49],
   student_details: {
-    name: "foo bar",
+    name: "chris",
     address: {
       street: "foo",
       city: "bar",
-      zip: "1101",
+      zip: "**",
     },
-    school: {
-      name: "foo",
-      address: "bar",
-    },
-    age: "39",
-    contact: ["434355", "343433", "324343"],
+    age: 19,
   },
 };
 
