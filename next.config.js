@@ -6,10 +6,6 @@ const nextConfig = {
         source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
-          {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
           },
@@ -28,6 +24,10 @@ const nextConfig = {
           {
             key: 'X-Frame-Options',
             value: 'ALLOW-FROM https://notion.so/'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: 'default-src \'self\' *.notion.so; img-src *'
           },
           {
             key: 'X-DNS-Prefetch-Control',
