@@ -1,42 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'same-origin',
-          },
-          {
-            key: 'X-Permitted-Cross-Domain-Policies',
-            value: 'none',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'allow-from www.notion.so'
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: 'default-src \'self\'; frame-ancestors www.notion.so'
-          },
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'off',
-          },
-        ],
-      },
-    ]
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/(.*)',
+  //       headers: [
+  //         {
+  //           key: 'X-XSS-Protection',
+  //           value: '1; mode=block',
+  //         },
+  //         {
+  //           key: 'X-Content-Type-Options',
+  //           value: 'nosniff',
+  //         },
+  //         {
+  //           key: 'Referrer-Policy',
+  //           value: 'same-origin',
+  //         },
+  //         {
+  //           key: 'X-Permitted-Cross-Domain-Policies',
+  //           value: 'none',
+  //         },
+  //         {
+  //           key: 'X-Frame-Options',
+  //           value: 'allow-from *.notion.so'
+  //         },
+  //         {
+  //           key: 'Content-Security-Policy',
+  //           value: 'frame-ancestors *.notion.so'
+  //         },
+  //         {
+  //           key: 'X-DNS-Prefetch-Control',
+  //           value: 'off',
+  //         },
+  //       ],
+  //     },
+  //   ]
+  // },
   images: {
     remotePatterns: [
       {
