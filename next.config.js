@@ -26,6 +26,10 @@ const nextConfig = {
             value: 'none',
           },
           {
+            key: 'X-Frame-Options',
+            value: 'ALLOW-FROM https://notion.so/'
+          },
+          {
             key: 'X-DNS-Prefetch-Control',
             value: 'off',
           },
