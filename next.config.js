@@ -23,11 +23,11 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'ALLOW-FROM https://notion.so/'
+            value: 'allow-from www.notion.so'
           },
           {
             key: 'Content-Security-Policy',
-            value: 'default-src \'self\' *.notion.so; img-src *'
+            value: 'default-src \'self\'; frame-ancestors www.notion.so'
           },
           {
             key: 'X-DNS-Prefetch-Control',
