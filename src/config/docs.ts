@@ -1,4 +1,4 @@
-import { MainNavItem, SidebarNavItem } from "types/nav"
+import { MainNavItem, SidebarNavItem } from "@/types/nav"
 
 interface DocsConfig {
   mainNav: MainNavItem[]
@@ -6,14 +6,15 @@ interface DocsConfig {
 }
 
 export const docsConfig: DocsConfig = {
+  // 小组件  博客  教程  反馈  notion组件库gallery外链
   mainNav: [
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Widgets",
+      href: "/widgets/home",
     },
     {
-      title: "Components",
-      href: "/docs/components/accordion",
+      title: "Blog",
+      href: "/widgets/blog",
     },
     {
       title: "Themes",

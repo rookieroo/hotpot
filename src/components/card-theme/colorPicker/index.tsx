@@ -1,6 +1,7 @@
 import React, {useCallback, useRef, useState} from "react"
 
 import useClickOutside from "@/hooks/useClickOutside"
+import {Popover, PopoverTrigger, PopoverContent} from "@/ui/popover";
 import {Input} from "@/ui/input";
 
 const ColorPicker = ({color, onChange, presetColors}) => {
@@ -19,25 +20,30 @@ const ColorPicker = ({color, onChange, presetColors}) => {
       />
 
       {isOpen && (
-        <div className="popover" ref={popover}>
-          <Input
-            type="color"
-            id="background-fill"
-            title="Background color"
-            value={color}
-            onChange={event => onChange(event.target.value)}
-          ></Input>
-          <div className="picker__swatches">
-            {presetColors.map((presetColor: string) => (
-              <button
-                key={presetColor}
-                className="picker__swatch"
-                style={{backgroundColor: presetColor}}
-                onClick={() => onChange(presetColor)}
-              />
-            ))}
-          </div>
-        </div>
+        <Popover>
+          <PopoverTrigger>
+            Open Color
+          </PopoverTrigger>
+          <PopoverContent>
+            <Input
+              type="color"
+              id="background-fill"
+              title="Background color"
+              value={color}
+              onChange={event => onChange(event.target.value)}
+            ></Input>
+            <div className="picker__swatches">
+              {presetColors.map((presetColor: string) => (
+                <button
+                  key={presetColor}
+                  className="picker__swatch"
+                  style={{backgroundColor: presetColor}}
+                  onClick={() => onChange(presetColor)}
+                />
+              ))}
+            </div>
+          </PopoverContent>
+        </Popover>
       )}
     </div>
   )
