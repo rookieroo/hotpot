@@ -9,7 +9,7 @@ import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 import {ThemeProvider as MuiThemeProvider, createTheme} from '@mui/material/styles';
 import {ReactQueryStreamedHydration} from '@tanstack/react-query-next-experimental'
 import {useConfig} from "@/store/useConfig";
-import React, {useState} from "react";
+import React, {useState, Suspense} from "react";
 
 interface ProvidersProps {
   children: ReactNode
@@ -30,23 +30,25 @@ const Providers: FC<ProvidersProps> = ({children}) => {
   )
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryStreamedHydration>
-        <MuiThemeProvider theme={config?.mergeTheme}>
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange
-          >
-            <SessionProvider>
-              <TooltipProvider>{children}</TooltipProvider>
-            </SessionProvider>
-          </ThemeProvider>
-        </MuiThemeProvider>
-      </ReactQueryStreamedHydration>
-      <ReactQueryDevtools initialIsOpen={false}/>
-    </QueryClientProvider>
+    <Suspense>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryStreamedHydration>
+          <MuiThemeProvider theme={config?.mergeTheme}>
+            <ThemeProvider
+              attribute='class'
+              defaultTheme='system'
+              enableSystem
+              disableTransitionOnChange
+            >
+              <SessionProvider>
+                <TooltipProvider>{children}</TooltipProvider>
+              </SessionProvider>
+            </ThemeProvider>
+          </MuiThemeProvider>
+        </ReactQueryStreamedHydration>
+        <ReactQueryDevtools initialIsOpen={false}/>
+      </QueryClientProvider>
+    </Suspense>
   )
 }
 
