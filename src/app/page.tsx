@@ -25,19 +25,19 @@ export default function Home() {
 
           <Paragraph className='max-w-xl lg:text-left'>
             <Link
-              href='/markdown'
+              href='/app/markdown'
               className='underline underline-offset-2 text-black dark:text-light-gold'>
               Markdown Editor
             </Link>
             <br />
             <Link
-              href='/json'
+              href='/app/json'
               className='underline underline-offset-2 text-black dark:text-light-gold'>
               Json Editor
             </Link>
             <br />
             <Link
-              href='/tinymce'
+              href='/app/tinymce'
               className='underline underline-offset-2 text-black dark:text-light-gold'>
               TinyMCE Editor
             </Link>

@@ -31,31 +31,31 @@ const MenuNavs = [
     items: [
       {
         code: "excalidraw",
-        href: "/excalidraw",
+        href: "/app/excalidraw",
         icon: TbBallpen,
         description: "Hand-drawn look & feel • Collaborative • Secure"
       },
       {
         code: "convert",
-        href: "/convert",
+        href: "/app/convert",
         icon: TbArrowsUpDown,
         description: "A handy utility for converting between quantities in different units(length,weight,currency etc.)."
       },
       {
         code: "shici",
-        href: "/shici",
+        href: "/app/shici",
         icon: TbAd,
         description: "Chinese poetry"
       },
       {
         code: "transfer",
-        href: "/transfer",
+        href: "/app/transfer",
         icon: TbTransitionBottom,
         description: "Conversion between simplified chinese and traditional chinese"
       },
       {
         code: "celestial",
-        href: "/celestial",
+        href: "/app/celestial",
         icon: TbStars,
         description: "Star maps"
       },
@@ -68,44 +68,44 @@ const MenuNavs = [
     items: [
       {
         code: "json",
-        href: "/json",
+        href: "/app/json",
         icon: TbJson,
         description: "JSON Editor"
       },
       {
         code: "md",
-        href: "/markdown",
+        href: "/app/markdown",
         icon: TbMarkdown,
         description: "Markdown Editor"
 
       },
       {
         code: "keyboard",
-        href: "/keyboard",
+        href: "/app/keyboard",
         icon: TbKeyboard,
         description: "Keyboard customizer"
       },
       {
         code: "TinyMCE",
-        href: "/tinymce",
+        href: "/app/tinymce",
         icon: TbEdit,
         description: "Tinymce Editor"
       },
       {
         code: "Minify",
-        href: "/minify",
+        href: "/app/minify",
         icon: TbMinimize,
         description: "Code minify"
       },
       {
         code: "QrCode",
-        href: "/qrcode",
+        href: "/app/qrcode",
         icon: TbQrcode,
         description: "Qrcode factory"
       },
       {
         code: "Regex",
-        href: "/regex",
+        href: "/app/regex",
         icon: TbRegex,
         description: "Regex visualization"
       },
@@ -118,13 +118,13 @@ const MenuNavs = [
     items: [
       {
         code: "mahjong",
-        href: "/mahjong",
+        href: "/app/mahjong",
         icon: TbDice2,
         description: "Mahjong rules helper"
       },
       {
         code: "cube",
-        href: "/cube",
+        href: "/app/cube",
         icon: TbCube,
         description: "Cube games"
       },

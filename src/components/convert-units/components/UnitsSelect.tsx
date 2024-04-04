@@ -3,7 +3,7 @@ import {Box, TextField, Autocomplete, FormControl, InputLabel, Input, InputAdorn
 import convert from "convert-units";
 import {useTranslation} from "@/locales/client";
 import { useAtomValue } from "jotai";
-import {unitAtom} from "@/app/convert/page";
+import {unitAtom} from "@/app/app/convert/page";
 
 export interface IMeasure {
   abbr: convert.Unit;

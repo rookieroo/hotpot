@@ -4,7 +4,7 @@ import {IconButton} from "@mui/material";
 import SyncAltIcon from '@mui/icons-material/SyncAlt';
 import convert from "convert-units";
 import { useAtomValue } from "jotai";
-import {unitAtom} from "@/app/convert/page";
+import {unitAtom} from "@/app/app/convert/page";
 export interface IUnitProps {
   frontUnit: string;
   frontVal?: number;
