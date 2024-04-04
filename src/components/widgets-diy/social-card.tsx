@@ -1,31 +1,22 @@
 'use client'
 
-import Icons from "@/components/customize-ui/Icons";
-import {CopyCodeButton, WidgetCustomizer} from "@/components/widgets-diy/widget-customizer";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/ui/card";
+import {Card, CardContent, CardHeader, CardTitle} from "@/ui/card";
 import {CheckIcon, CopyIcon, InfoCircledIcon, ResetIcon} from "@radix-ui/react-icons";
 import {Button} from "@/ui/button";
 import {Label} from "@/ui/label";
 import {Popover, PopoverContent, PopoverTrigger} from "@/ui/popover";
-import {cn} from "@/utils/utils";
 import ColorPicker from "@/components/card-theme/colorPicker";
 import {useTranslation} from "@/locales/client";
 import React, {FormEvent, useEffect, useState} from "react";
-import useStore from "@/store/useStore";
-import {useTheme} from "next-themes";
 import {compose_social, init_social, PLATFORMS, presetColors, SocialProps} from "@/components/widgets-diy/config";
 import {Input} from "@/ui/input";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
-import {Tab, Tabs} from "@mui/material";
 import {SocialMenu} from "@/components/widgets-diy/social-menu";
-import {Pipette, PlusCircle} from "lucide-react"
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
-
-const init_list: SocialProps[] = []
 
 function NodCard() {
   const pathname = usePathname()
