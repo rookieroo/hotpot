@@ -6,6 +6,7 @@ import {siteConfig} from "@/config/site"
 import {fontSans} from "@/lib/fonts"
 import {cn} from "@/utils/utils"
 import {Analytics} from "@/components/customize-ui/analytics"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Providers from "@/app/providers"
 import {SiteFooter} from "@/components/layout/site-footer"
 import {SiteHeader} from "@/components/layout/site-header"
@@ -107,6 +108,7 @@ export default function RootLayout({
         <NewYorkToaster/>
         <DefaultToaster/>
         <NewYorkSonner/>
+        <SpeedInsights />
       </Providers>
       </body>
       </html>

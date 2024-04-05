@@ -5,7 +5,7 @@ import { Style } from "@/components/theme/styles"
 import { Theme } from "@/components/theme/themes"
 import {TLanguage} from "@/locales";
 import {i18n} from "@/locales/client";
-import {ThemeOptions} from "@mui/material/styles";
+import {createTheme, ThemeOptions} from "@mui/material/styles";
 
 type Config = {
   style: Style["name"]
@@ -18,6 +18,8 @@ type Config = {
   mergeTheme: ThemeOptions
 }
 
+const defaultTheme = createTheme();
+
 const configAtom = atomWithStorage<Config>("config", {
   style: "new-york",
   theme: "slate",
@@ -26,7 +28,7 @@ const configAtom = atomWithStorage<Config>("config", {
   lang: i18n.language || 'zh',
   direction: 'ltr',
   threshold: 20,
-  mergeTheme: {}
+  mergeTheme: defaultTheme
 })
 
 export function useConfig() {

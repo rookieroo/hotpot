@@ -176,7 +176,7 @@ export const getMetaThemeColor = (mode: 'light' | 'dark') => {
 
 const hslaWrapper = (hsl, a= 1) => `hsl(${hsl} / ${a})`
 
-export const getDesignTokens = (mode: 'light' | 'dark', theme) => {
+export const getDesignTokens = (mode: string, theme) => {
   const activeColor = mode === 'light' ? hslaWrapper(theme.activeColor.light) : hslaWrapper(theme.activeColor.dark)
   const cssVars = mode === 'light' ? theme.cssVars.light : theme.cssVars.dark
 
@@ -1288,6 +1288,6 @@ export const mergeThemes = (mode: 'light'|'dark', theme: string) => {
   const shadcnTheme = themes.find(t => t.name === theme)
   return createTheme({
     ...getDesignTokens(mode, shadcnTheme),
-    ...getThemedComponents(mode, shadcnTheme),
+    ...getThemedComponents(),
   });
 }

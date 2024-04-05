@@ -30,7 +30,6 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {PLATFORMS} from "@/components/widgets-diy/config";
 import {Switch} from "@/ui/switch";
 import {useState} from "react";
 
@@ -56,6 +55,7 @@ export function SocialMenu({social, socialList, onSocialItemClick, onCheckedSoci
         <DropdownMenuGroup>
           {socialList.map(p =>
             <DropdownMenuItem
+              key={p.title}
               onClick={() => {
                 onSocialItemClick(p);
               }}
@@ -70,7 +70,6 @@ export function SocialMenu({social, socialList, onSocialItemClick, onCheckedSoci
                   onCheckedChange={(v, event) => {
                     setOpen(true)
                     onCheckedSocialChange(v, p);
-                    event.preventDefault;
                   }}
                 />
               </DropdownMenuShortcut>

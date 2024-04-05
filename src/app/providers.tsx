@@ -17,6 +17,7 @@ interface ProvidersProps {
 
 const Providers: FC<ProvidersProps> = ({children}) => {
   const [config] = useConfig()
+  const defaultTheme = createTheme();
 
   const [queryClient] = useState(
     () =>
@@ -30,21 +31,21 @@ const Providers: FC<ProvidersProps> = ({children}) => {
   )
 
   return (
-    <Suspense>
+    <Suspense fallback={<span>loading..</span>}>
       <QueryClientProvider client={queryClient}>
         <ReactQueryStreamedHydration>
-          <MuiThemeProvider theme={config?.mergeTheme}>
-            <ThemeProvider
-              attribute='class'
-              defaultTheme='system'
-              enableSystem
-              disableTransitionOnChange
-            >
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <MuiThemeProvider theme={defaultTheme}>
               <SessionProvider>
                 <TooltipProvider>{children}</TooltipProvider>
               </SessionProvider>
-            </ThemeProvider>
-          </MuiThemeProvider>
+            </MuiThemeProvider>
+          </ThemeProvider>
         </ReactQueryStreamedHydration>
         <ReactQueryDevtools initialIsOpen={false}/>
       </QueryClientProvider>

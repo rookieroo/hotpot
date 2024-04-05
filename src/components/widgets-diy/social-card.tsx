@@ -7,10 +7,10 @@ import {Label} from "@/ui/label";
 import {Popover, PopoverContent, PopoverTrigger} from "@/ui/popover";
 import ColorPicker from "@/components/card-theme/colorPicker";
 import {useTranslation} from "@/locales/client";
-import React, {FormEvent, useEffect, useState} from "react";
-import {compose_social, init_social, PLATFORMS, presetColors, SocialProps} from "@/components/widgets-diy/config";
+import React, {useEffect, useState} from "react";
+import {compose_social, init_social, presetColors, SocialProps} from "@/components/widgets-diy/config";
 import {Input} from "@/ui/input";
-import {usePathname, useRouter, useSearchParams} from "next/navigation";
+import {useSearchParams} from "next/navigation";
 import {SocialMenu} from "@/components/widgets-diy/social-menu";
 import {
   ResizableHandle,
@@ -19,8 +19,6 @@ import {
 } from "@/components/ui/resizable"
 
 function NodCard() {
-  const pathname = usePathname()
-  const router = useRouter()
   const searchParams = useSearchParams()
   const [hideEdit, setHideEdit] = useState(false);
   const [hasCopied, setHasCopied] = useState(false)
@@ -32,6 +30,7 @@ function NodCard() {
 
   // 解析 URL 参数并设置为初始按钮属性
   useEffect(() => {
+    const routeParams = new URLSearchParams(searchParams.toString())
     const queryProps: Partial<SocialProps> = {...social};
     Object.keys(routeParams).forEach((key) => {
       const value = routeParams[key];
@@ -48,7 +47,7 @@ function NodCard() {
     });
     setSocial(queryProps as SocialProps);
     setHideEdit(routeParams.get("use") === '1');
-  }, [routeParams]);
+  }, [searchParams]);
 
   const copyToClipboard = () => {
     const params = new URLSearchParams();

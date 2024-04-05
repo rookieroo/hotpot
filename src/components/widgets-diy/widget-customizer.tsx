@@ -27,14 +27,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import {Skeleton} from "@/components/ui/skeleton"
-import {Theme, themes} from "@/components/theme/themes"
+import {themes} from "@/components/theme/themes"
 import "@/styles/mdx.css"
 import {useTranslation, i18n} from "@/locales/client";
 import ColorPicker from "@/components/card-theme/colorPicker";
 import useStore from "@/store/useStore";
-
-
 
 export function WidgetCustomizer() {
   const [mounted, setMounted] = React.useState(false)
