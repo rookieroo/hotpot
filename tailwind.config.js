@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme")
+const colors = require('tailwindcss/colors')
+import animations from '@midudev/tailwind-animations'
 
 module.exports = {
   darkMode: ["class"],
@@ -97,5 +99,10 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require('tailwindcss-animate'),
+    // require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    animations,
+  ],
 }

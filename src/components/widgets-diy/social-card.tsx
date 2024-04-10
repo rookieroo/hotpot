@@ -17,6 +17,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
+import {SocialPopover, SocialSelect} from "@/components/widgets-diy/social-popover";
 
 function NodCard() {
   const searchParams = useSearchParams()
@@ -76,6 +77,18 @@ function NodCard() {
       }
     })
     setSocialList(sl)
+  }
+
+  const onUserIDChange = async (event) => {
+    setSocial({
+      ...social,
+      user_id: event.target.value
+    })
+    const url = `https://api.rebang.today/v1/menu_tabs?update_flag=${append}`
+    const res: string = await (
+      await fetch(url)
+    ).json()
+
   }
 
   return (
@@ -183,7 +196,7 @@ function NodCard() {
                       }
                       presetColors={presetColors}
                     />
-                    <SocialMenu
+                    <SocialPopover
                       social={social}
                       socialList={socialList}
                       onSocialItemClick={onSocialItemClick}
@@ -203,19 +216,6 @@ function NodCard() {
                       )}
                       Copy
                     </Button>
-                  </div>
-                </div>
-                <div className="space-y-1.5">
-                  <Label className="text-xs">{t("Title")}</Label>
-                  <div className="grid grid-cols-1 gap-2">
-                    <Input
-                      onChange={event =>
-                        setSocial({
-                          ...social,
-                          title: event.target.value
-                        })
-                      }
-                    />
                   </div>
                 </div>
                 <div className="space-y-1.5">

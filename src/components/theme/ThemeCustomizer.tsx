@@ -39,7 +39,7 @@ import {
 } from "@/components/ui/popover"
 import {Skeleton} from "@/components/ui/skeleton"
 import {Theme, themes} from "@/components/theme/themes"
-import "@/styles/mdx.css"
+// import "@/styles/mdx.css"
 import {
   Tooltip,
   TooltipContent,
