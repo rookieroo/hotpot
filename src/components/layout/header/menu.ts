@@ -264,7 +264,7 @@ export const Widgets_Menu = [
     cate: ["individuals", "social"],
     href: "/widgets/social-card",
     icon: Twitter,
-    description: "Social card"
+    description: "social card customize"
   },
   {
     code: "pomodoro",

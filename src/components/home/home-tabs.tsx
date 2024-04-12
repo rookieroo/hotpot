@@ -36,23 +36,6 @@ export function HomeTabs() {
 
   return (
     <div className="flex-1 space-y-4 p-16 pt-6">
-      <h2 className="text-3xl font-bold tracking-tight">Tools List</h2>
-      <Tabs defaultValue={toolTab} onValueChange={setToolTab} className="space-y-4">
-        <ScrollArea className="w-full">
-          <TabsList>
-            {Tools_Category.map(cate =>
-              <TabsTrigger value={cate.name} disabled={!cate.active}>
-                <cate.icon className="h-4 w-4" />&nbsp;
-                {cate.name}
-              </TabsTrigger>
-            )}
-          </TabsList>
-          <ScrollBar orientation="horizontal"></ScrollBar>
-        </ScrollArea>
-        <TabsContent value={toolTab} className="space-y-4">
-          <HomeTabsList list={toolTabList} />
-        </TabsContent>
-      </Tabs>
       <h2 className="text-3xl font-bold tracking-tight">Widgets List</h2>
       <Tabs defaultValue={widgetsTab} onValueChange={setWidgetsTab} className="space-y-4">
         <ScrollArea className="w-full">
@@ -68,6 +51,23 @@ export function HomeTabs() {
         </ScrollArea>
         <TabsContent value={widgetsTab} className="space-y-4">
           <HomeTabsList list={widgetsTabList} />
+        </TabsContent>
+      </Tabs>
+      <h2 className="text-3xl font-bold tracking-tight">Tools List</h2>
+      <Tabs defaultValue={toolTab} onValueChange={setToolTab} className="space-y-4">
+        <ScrollArea className="w-full">
+          <TabsList>
+            {Tools_Category.map(cate =>
+              <TabsTrigger value={cate.name} disabled={!cate.active}>
+                <cate.icon className="h-4 w-4" />&nbsp;
+                {cate.name}
+              </TabsTrigger>
+            )}
+          </TabsList>
+          <ScrollBar orientation="horizontal"></ScrollBar>
+        </ScrollArea>
+        <TabsContent value={toolTab} className="space-y-4">
+          <HomeTabsList list={toolTabList} />
         </TabsContent>
       </Tabs>
     </div>
