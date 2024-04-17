@@ -223,13 +223,6 @@ export const Tools_Menu = [
     description: "Keyboard customizer"
   },
   {
-    code: "tinyMCE",
-    cate: "docs",
-    href: "/app/tinymce",
-    icon: TbEdit,
-    description: "Tinymce Editor"
-  },
-  {
     code: "minify",
     cate: "work",
     href: "/app/minify",

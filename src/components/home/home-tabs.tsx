@@ -41,7 +41,7 @@ export function HomeTabs() {
         <ScrollArea className="w-full">
           <TabsList>
             {Widgets_Category.map(cate =>
-              <TabsTrigger value={cate.name} disabled={!cate.active}>
+              <TabsTrigger key={cate.name} value={cate.name} disabled={!cate.active}>
                 <cate.icon className="h-4 w-4" />&nbsp;
                 {cate.name}
               </TabsTrigger>
@@ -58,7 +58,7 @@ export function HomeTabs() {
         <ScrollArea className="w-full">
           <TabsList>
             {Tools_Category.map(cate =>
-              <TabsTrigger value={cate.name} disabled={!cate.active}>
+              <TabsTrigger key={cate.name} value={cate.name} disabled={!cate.active}>
                 <cate.icon className="h-4 w-4" />&nbsp;
                 {cate.name}
               </TabsTrigger>

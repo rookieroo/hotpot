@@ -6,9 +6,10 @@ import {siteConfig} from "@/config/site"
 import {fontSans} from "@/lib/fonts"
 import {cn} from "@/utils/utils"
 import {Analytics} from "@/components/customize-ui/analytics"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import {SpeedInsights} from "@vercel/speed-insights/next"
 import Providers from "@/app/providers"
 import {SiteFooter} from "@/components/layout/site-footer"
+import { ViewTransitions } from 'next-view-transitions'
 import {SiteHeader} from "@/components/layout/site-header"
 import {TailwindIndicator} from "@/components/customize-ui/tailwind-indicator"
 import {ThemeSwitcher} from "@/components/theme/theme-switcher"
@@ -81,37 +82,39 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({
-   children
- }: RootLayoutProps) {
+                                     children
+                                   }: RootLayoutProps) {
 
   return (
     <>
-      <html lang={lang} suppressHydrationWarning>
-      <head/>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.className
-        )}
-      >
-      <Providers>
-        <div vaul-drawer-wrapper="">
-          <div className="relative flex min-h-screen flex-col bg-background">
-            <SiteHeader/>
-            <main className="flex-1">{children}</main>
-            {/*<SiteFooter/>*/}
+      <ViewTransitions>
+        <html lang={lang} suppressHydrationWarning>
+        <head/>
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.className
+          )}
+        >
+        <Providers>
+          <div vaul-drawer-wrapper="">
+            <div className="relative flex min-h-screen flex-col bg-background">
+              <SiteHeader/>
+              <main className="flex-1">{children}</main>
+              {/*<SiteFooter/>*/}
+            </div>
           </div>
-        </div>
-        <TailwindIndicator/>
-        <ThemeSwitcher/>
-        <Analytics/>
-        <NewYorkToaster/>
-        <DefaultToaster/>
-        <NewYorkSonner/>
-        <SpeedInsights />
-      </Providers>
-      </body>
-      </html>
+          <TailwindIndicator/>
+          <ThemeSwitcher/>
+          <Analytics/>
+          <NewYorkToaster/>
+          <DefaultToaster/>
+          <NewYorkSonner/>
+          <SpeedInsights/>
+        </Providers>
+        </body>
+        </html>
+      </ViewTransitions>
     </>
   )
 }

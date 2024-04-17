@@ -92,9 +92,6 @@ dependencies:
   '@tanstack/react-table':
     specifier: ^8.11.7
     version: 8.11.8(react-dom@18.2.0)(react@18.2.0)
-  '@tinymce/tinymce-react':
-    specifier: ^4.3.2
-    version: 4.3.2(react-dom@18.2.0)(react@18.2.0)
   '@total-typescript/ts-reset':
     specifier: ^0.3.7
     version: 0.3.7
@@ -215,6 +212,9 @@ dependencies:
   next-themes:
     specifier: ^0.2.1
     version: 0.2.1(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)
+  next-view-transitions:
+    specifier: ^0.1.1
+    version: 0.1.1(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)
   openai:
     specifier: ^3.2.1
     version: 3.3.0
@@ -3354,18 +3354,6 @@ packages:
 
   /@tanstack/virtual-core@3.0.0:
     resolution: {integrity: sha512-SYXOBTjJb05rXa2vl55TTwO40A6wKu0R5i1qQwhJYNDIqaIGF7D0HsLw+pJAyi2OvntlEIVusx3xtbbgSUi6zg==}
-    dev: false
-
-  /@tinymce/tinymce-react@4.3.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-wJHZhPf2Mk3yTtdVC/uIGh+kvDgKuTw/qV13uzdChTNo68JI1l7jYMrSQOpyimDyn5LHAw0E1zFByrm1WHAVeA==}
-    peerDependencies:
-      react: ^18.0.0 || ^17.0.1 || ^16.7.0
-      react-dom: ^18.0.0 || ^17.0.1 || ^16.7.0
-    dependencies:
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      tinymce: 6.8.2
     dev: false
 
   /@tootallnate/quickjs-emscripten@0.23.0:
@@ -7236,6 +7224,18 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
+  /next-view-transitions@0.1.1(next@14.1.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-1rpXhWF8j0VJwJG52c8WeeAYpr1K7o3ub82lahbSoUwAry54TEm1d3mqBbSLLIMl85c3OewkZjxncTHwYFk+IA==}
+    peerDependencies:
+      next: ^14.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      next: 14.1.4(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /next@14.1.4(react-dom@18.2.0)(react@18.2.0)(sass@1.70.0):
     resolution: {integrity: sha512-1WTaXeSrUwlz/XcnhGTY7+8eiaFvdet5z9u3V2jb+Ek1vFo0VhHKSAIJvDWfQpttWjnyw14kBeq28TPq7bTeEQ==}
     engines: {node: '>=18.17.0'}
@@ -9065,10 +9065,6 @@ packages:
 
   /tiny-typed-emitter@2.1.0:
     resolution: {integrity: sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA==}
-    dev: false
-
-  /tinymce@6.8.2:
-    resolution: {integrity: sha512-Lho79o2Y1Yn+XdlTEkHTEkEmzwYWTXz7IUsvPwxJF3VTtgHUIAAuBab29kik+f2KED3rZvQavr9D7sHVMJ9x4A==}
     dev: false
 
   /tldts-core@6.1.11:
