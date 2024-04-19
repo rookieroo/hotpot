@@ -44,6 +44,16 @@ import {
   Monitor,
   Tent,
   Youtube,
+  Bookmark,
+  Blocks,
+  BookCheck,
+  Webcam,
+  Cat,
+  PawPrint,
+  Palette,
+  Image,
+  BookImage,
+  ALargeSmall
 } from 'lucide-react';
 
 const Settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -168,6 +178,21 @@ export const Widgets_Category = [
   {
     name: 'social',
     icon: Youtube,
+    active: true
+  },
+  {
+    name: 'ACGN',
+    icon: PawPrint,
+    active: true
+  },
+  {
+    name: 'image',
+    icon: BookImage,
+    active: true
+  },
+  {
+    name: 'font',
+    icon: ALargeSmall,
     active: true
   },
 ];
@@ -310,6 +335,79 @@ export const Widgets_Menu = [
   },
 ]
 
+export const Bookmarks_Menu = [
+  {
+    code: "twittervid",
+    cate: ["product", "social"],
+    href: "https://twittervid.com",
+    icon: Twitter,
+    description: "Twitter video Downloader"
+  },
+  {
+    code: "markdowndown",
+    cate: ["product", "efficiency"],
+    href: "https://markdowndown.vercel.app/",
+    icon: BookCheck,
+    description: "Convert any webpage to a clean markdown"
+  },
+  {
+    code: "elmo.chat",
+    cate: ["product", "efficiency", "chrome extension"],
+    href: "https://www.elmo.chat/",
+    icon: Blocks,
+    description: "AI companion to create summaries and insights"
+  },
+  {
+    code: "jina.ai",
+    cate: ["product", "efficiency"],
+    href: "https://jina.ai/reader#apiform",
+    icon: BookCheck,
+    description: "Simply prepend 'https://r.jina.ai/' to any URL"
+  },
+  {
+    code: "web-check",
+    cate: ["product", "efficiency"],
+    href: "https://web-check.xyz/",
+    icon: Webcam,
+    description: "Enter a URL to check"
+  },
+  {
+    code: "material.io.color",
+    cate: ["product"],
+    href: "https://m2.material.io/inline-tools/color/",
+    icon: Palette,
+    description: "material.io Color palettes"
+  },
+  {
+    code: "konachan",
+    cate: ["ACGN"],
+    href: "https://konachan.net/post?tags=",
+    icon: Cat,
+    description: "Anime wallpapers"
+  },
+  {
+    code: "unsplash",
+    cate: ["product", "image"],
+    href: "https://unsplash.com/",
+    icon: Image,
+    description: "The internet’s source for visuals. Powered by creators everywhere."
+  },
+  {
+    code: "pexels",
+    cate: ["product", "image"],
+    href: "https://www.pexels.com/",
+    icon: Image,
+    description: "The best free stock photos, royalty free images & videos shared by creators."
+  },
+  {
+    code: "pixabay",
+    cate: ["product", "image"],
+    href: "https://pixabay.com/",
+    icon: Image,
+    description: "Stunning royalty-free images & royalty-free stock"
+  },
+]
+
 const MenuNavs = [
   {
     title: "tools",
@@ -322,6 +420,12 @@ const MenuNavs = [
     icon: AlarmClock,
     href: "#",
     items: Widgets_Menu
+  },
+  {
+    title: "bookmarks",
+    icon: Bookmark,
+    href: "#",
+    items: Bookmarks_Menu
   }
 ];
 
