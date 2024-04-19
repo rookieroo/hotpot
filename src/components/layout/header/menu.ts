@@ -361,6 +361,7 @@ export const Bookmarks_Menu = [
     code: "jina.ai",
     cate: ["product", "efficiency"],
     href: "https://jina.ai/reader#apiform",
+    pre_href: "https://r.jina.ai/",
     icon: BookCheck,
     description: "Simply prepend 'https://r.jina.ai/' to any URL"
   },
@@ -368,6 +369,7 @@ export const Bookmarks_Menu = [
     code: "web-check",
     cate: ["product", "efficiency"],
     href: "https://web-check.xyz/",
+    pre_href: "https://web-check.xyz/results/",
     icon: Webcam,
     description: "Enter a URL to check"
   },
