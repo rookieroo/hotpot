@@ -20,14 +20,29 @@ import {
 import {Label} from "@/ui/label";
 import {Input} from "@/ui/input";
 import {Copy} from "lucide-react";
+import { ToastAction } from "@/components/ui/toast"
+import { useToast } from "@/components/ui/use-toast"
+import {useEffect} from "react";
 
 
 const prehandle_url = ['jina.ai', 'web-check']
 
 export function HomeTabsList({list}) {
+  const { toast } = useToast()
   const [item, setItem] = React.useState(null);
   const [url, setUrl] = React.useState('https://ui.shadcn.com/docs/installation');
+  const [concatUrl, setConcatUrl] = React.useState('');
   const router = useRouter()
+
+  useEffect(() => {
+    if (item && url) {
+      let concatUrl = `${item.pre_href}${encodeURIComponent(url)}`
+      if (item.code === 'jina.ai') {
+        concatUrl = `${item.pre_href}${url}`
+      }
+      setConcatUrl(concatUrl)
+    }
+  }, [url, item])
 
   const handleClick = (e, m) => {
     if (prehandle_url.indexOf(m.code) > -1) {
@@ -38,7 +53,18 @@ export function HomeTabsList({list}) {
     }
   };
   const toLink = () => {
-    window.open(`${item.pre_href}${encodeURIComponent(url)}`, '_blank')
+    window.open(concatUrl, '_blank')
+  };
+
+  const copy = () => {
+    navigator.clipboard.writeText(concatUrl)
+    toast({
+      title: "Copied ",
+      description: "Concat url copied to clipboard",
+      // action: (
+      //   <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
+      // ),
+    })
   };
 
   return (
@@ -63,9 +89,9 @@ export function HomeTabsList({list}) {
         <Dialog open={item} onOpenChange={setItem}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
-              <DialogTitle>Share link</DialogTitle>
+              <DialogTitle>concat link</DialogTitle>
               <DialogDescription>
-                Anyone who has this link will be able to view this.
+               拼接url访问
               </DialogDescription>
             </DialogHeader>
             <div className="flex items-center space-x-2">
@@ -80,8 +106,10 @@ export function HomeTabsList({list}) {
                   readOnly
                 />
               </div>
-              <Button type="submit" size="sm" className="px-3">
-                <span className="sr-only">Copy</span>
+              <Button onClick={copy} type="submit" size="sm" className="px-3">
+                <span
+                  className="sr-only"
+                >Copy</span>
                 <Copy className="h-4 w-4"/>
               </Button>
             </div>
