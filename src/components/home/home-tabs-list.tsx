@@ -2,14 +2,10 @@
 
 import * as React from "react"
 import {Card, CardContent, CardHeader, CardTitle} from "@/ui/card";
-import Link from "next/link";
 import {useRouter} from 'next/navigation'
 import {Button} from "@/ui/button";
 import {
   Dialog,
-  DialogPortal,
-  DialogOverlay,
-  DialogTrigger,
   DialogClose,
   DialogContent,
   DialogHeader,
@@ -20,7 +16,6 @@ import {
 import {Label} from "@/ui/label";
 import {Input} from "@/ui/input";
 import {Copy} from "lucide-react";
-import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
 import {useEffect} from "react";
 
@@ -102,8 +97,7 @@ export function HomeTabsList({list}) {
                 <Input
                   id="link"
                   value={url}
-                  onChange={setUrl}
-                  readOnly
+                  onChange={e => setUrl(e.target.value)}
                 />
               </div>
               <Button onClick={copy} type="submit" size="sm" className="px-3">
