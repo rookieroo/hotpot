@@ -331,6 +331,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18.0.11
     version: 18.2.18
+  '@wcj/github-rank':
+    specifier: ^24.4.25
+    version: 24.4.25
   autoprefixer:
     specifier: ^10.4.13
     version: 10.4.17(postcss@8.4.33)
@@ -3698,6 +3701,10 @@ packages:
     resolution: {integrity: sha512-ButUPz9E9cXMLgvAW8aLAKKJJsPu1dY1/l/E8xzLFuysowXygs6GBcyunK9rnGC4zTsnIc2mQo71rGw9U+Ykug==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: false
+
+  /@wcj/github-rank@24.4.25:
+    resolution: {integrity: sha512-W9yaDhyKidtwrtMmbd/tqClTfTTYALW9dZlvip32UfRtDx9+4ollM0IWHE7/liInvawFcxcWWR8wiO/TTLfOaw==}
+    dev: true
 
   /@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}
