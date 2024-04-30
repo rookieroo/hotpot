@@ -53,7 +53,8 @@ import {
   Palette,
   Image,
   BookImage,
-  ALargeSmall
+  ALargeSmall,
+  ChevronRight
 } from 'lucide-react';
 
 const Settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -342,6 +343,13 @@ export const Bookmarks_Menu = [
     href: "https://markdown.com.cn/editor/",
     icon: BookCheck,
     description: "transfer markdown to wx,juejin,zhihu"
+  },
+  {
+    code: "cobalt",
+    cate: ["product", "social", "efficiency"],
+    href: "https://cobalt.tools/",
+    icon: ChevronRight,
+    description: "cobalt.tools"
   },
   {
     code: "twittervid",
