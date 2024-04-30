@@ -340,49 +340,49 @@ export const Widgets_Menu = [
 export const Bookmarks_Menu = [
   {
     code: "markdown.transfer",
-    cate: ["product", "social", "efficiency"],
+    cate: ["social", "efficiency"],
     href: "https://markdown.com.cn/editor/",
     icon: BookCheck,
     description: "transfer markdown to wx,juejin,zhihu"
   },
   {
     code: "cobalt",
-    cate: ["product", "social", "efficiency"],
+    cate: ["social", "efficiency"],
     href: "https://cobalt.tools/",
     icon: ChevronRight,
     description: "cobalt.tools"
   },
   {
     code: "free.kimi",
-    cate: ["product", "efficiency"],
+    cate: ["AI", "product"],
     href: "https://udify.app/chat/Po0F6BMJ15q5vu2P",
     icon: BotIcon,
     description: "free kimi from dify.ai "
   },
   {
     code: "twittervid",
-    cate: ["product", "social"],
+    cate: ["efficiency", "social"],
     href: "https://twittervid.com",
     icon: Twitter,
     description: "Twitter video Downloader"
   },
   {
     code: "markdowndown",
-    cate: ["product", "efficiency"],
+    cate: ["efficiency"],
     href: "https://markdowndown.vercel.app/",
     icon: BookCheck,
     description: "Convert any webpage to a clean markdown"
   },
   {
     code: "elmo.chat",
-    cate: ["product", "efficiency", "chrome extension"],
+    cate: ["AI", "efficiency"],
     href: "https://www.elmo.chat/",
     icon: Blocks,
     description: "AI companion to create summaries and insights"
   },
   {
     code: "jina.ai",
-    cate: ["product", "efficiency"],
+    cate: ["AI", "efficiency"],
     href: "https://jina.ai/reader#apiform",
     pre_href: "https://r.jina.ai/",
     icon: BookCheck,
@@ -390,7 +390,7 @@ export const Bookmarks_Menu = [
   },
   {
     code: "web-check",
-    cate: ["product", "efficiency"],
+    cate: ["work", "efficiency"],
     href: "https://web-check.xyz/",
     pre_href: "https://web-check.xyz/results/",
     icon: Webcam,
@@ -412,21 +412,21 @@ export const Bookmarks_Menu = [
   },
   {
     code: "unsplash",
-    cate: ["product", "image"],
+    cate: ["image"],
     href: "https://unsplash.com/",
     icon: Image,
     description: "The internet’s source for visuals. Powered by creators everywhere."
   },
   {
     code: "pexels",
-    cate: ["product", "image"],
+    cate: ["image"],
     href: "https://www.pexels.com/",
     icon: Image,
     description: "The best free stock photos, royalty free images & videos shared by creators."
   },
   {
     code: "pixabay",
-    cate: ["product", "image"],
+    cate: ["image"],
     href: "https://pixabay.com/",
     icon: Image,
     description: "Stunning royalty-free images & royalty-free stock"
