@@ -54,7 +54,8 @@ import {
   Image,
   BookImage,
   ALargeSmall,
-  ChevronRight
+  ChevronRight,
+  BotIcon
 } from 'lucide-react';
 
 const Settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -350,6 +351,13 @@ export const Bookmarks_Menu = [
     href: "https://cobalt.tools/",
     icon: ChevronRight,
     description: "cobalt.tools"
+  },
+  {
+    code: "free.kimi",
+    cate: ["product", "efficiency"],
+    href: "https://udify.app/chat/Po0F6BMJ15q5vu2P",
+    icon: BotIcon,
+    description: "free kimi from dify.ai "
   },
   {
     code: "twittervid",
