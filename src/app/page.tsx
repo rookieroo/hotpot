@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
 
   return (
-    <div className='h-[100vh] w-full flex-col sm:flex'>
+    <div className='w-full flex-col sm:flex'>
       <HomeTabs />
       <SiteFooter/>
     </div>
